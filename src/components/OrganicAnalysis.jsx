@@ -25,7 +25,7 @@ export default function OrganicAnalysis() {
             aria-hidden="true"
           >
             <source
-              src="/public/videos/jaguarai-card.mp4"
+              src="/videos/jaguarai-card.mp4"
               type="video/mp4"
             />
           </video>
