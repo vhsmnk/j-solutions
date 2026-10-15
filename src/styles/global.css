@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 /* ========================================
-   1. BASE E VARIÁVEIS
+   1. BASE E VARIÁVEIS GLOBAIS
 ======================================== */
 
 :root {
@@ -36,7 +36,7 @@
 html {
   background: var(--bg);
   scroll-behavior: smooth;
-  scroll-padding-top: 30px;
+  scroll-padding-top: 110px;
 }
 
 body {
@@ -96,7 +96,6 @@ p {
 }
 
 .section,
-.hero,
 .footer {
   padding-right: max(24px, calc((100vw - var(--content-width)) / 2));
   padding-left: max(24px, calc((100vw - var(--content-width)) / 2));
@@ -123,152 +122,9 @@ p {
 }
 
 /* ========================================
-   2. HERO E NAVEGAÇÃO
-======================================== */
-
-.hero {
-  position: relative;
-  display: flex;
-  min-height: 100svh;
-  flex-direction: column;
-  overflow: hidden;
-  background:
-    radial-gradient(
-      ellipse at 50% 38%,
-      rgba(255, 184, 0, 0.07),
-      transparent 48%
-    ),
-    var(--bg);
-}
-
-.navigation {
-  display: flex;
-  min-height: 88px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  border-bottom: 1px solid var(--line);
-  background: rgba(24, 24, 24, 0.92);
-  color: var(--text);
-}
-
-.nav-brand {
-  font-family: "Manrope", sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-}
-
-.nav-brand > span {
-  color: var(--gold);
-}
-
-.navigation nav {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.navigation nav a,
-.nav-contact {
-  color: #d0d0d0;
-  font-size: 12px;
-  transition: color 180ms ease, background 180ms ease;
-}
-
-.navigation nav a:hover,
-.nav-contact:hover,
-.navigation .nav-brand:hover {
-  color: var(--gold);
-}
-
-.nav-contact span {
-  margin-left: 8px;
-  color: var(--gold);
-}
-
-.hero-content {
-  display: flex;
-  width: 100%;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 0 90px;
-  text-align: center;
-}
-
-.hero-overline {
-  margin-bottom: 20px;
-  color: #b0b0b0;
-  font-size: 9px;
-  letter-spacing: 0.28em;
-}
-
-.hero h1 {
-  margin-bottom: 14px;
-  font-size: clamp(30px, 6vw, 62px);
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  line-height: 1.15;
-}
-
-.hero h1 span {
-  display: block;
-  margin-top: 12px;
-  color: var(--gold);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-}
-
-.hero-rule {
-  width: 44px;
-  height: 1px;
-  margin: 28px 0 22px;
-  background: var(--gold);
-}
-
-.hero-description {
-  margin-bottom: 28px;
-  color: #e2e2e2;
-  font-size: 14px;
-}
-
-.text-link {
-  padding: 12px 0;
-  color: var(--text);
-  font-size: 12px;
-  transition: color 180ms ease;
-}
-
-.text-link:hover {
-  color: var(--gold);
-}
-
-.text-link span {
-  margin-left: 8px;
-  color: var(--gold);
-}
-
-.hero-bottom {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 20px 0;
-  border-top: 1px solid var(--line);
-  color: #858585;
-  font-size: 9px;
-  letter-spacing: 0.13em;
-}
-
-/* ========================================
-   3. LOGO JAGUAR
-   Cabeça desenhada por traço.
-   Lettering sobreposto mais abaixo.
-   Sem tagline.
+   2. LOGO JAGUAR / INTRO
+   Preservar a animação original por traço.
+   Não aplicar rotação à logo.
 ======================================== */
 
 .brand-lockup {
@@ -305,7 +161,6 @@ p {
   animation-fill-mode: forwards;
 }
 
-/* Arquivo original jaguar.svg */
 .brand-name {
   position: absolute;
   z-index: 3;
@@ -355,7 +210,7 @@ p {
 }
 
 /* ========================================
-   4. SECÇÕES GERAIS
+   3. SECÇÕES GERAIS
 ======================================== */
 
 .section {
@@ -386,7 +241,7 @@ p {
 }
 
 /* ========================================
-   5. SERVIÇOS E METODOLOGIA
+   4. SERVIÇOS E METODOLOGIA
 ======================================== */
 
 .services {
@@ -463,7 +318,7 @@ p {
 }
 
 /* ========================================
-   6. PORTFÓLIO
+   5. PORTFÓLIO
 ======================================== */
 
 .portfolio-grid {
@@ -586,7 +441,7 @@ p {
 }
 
 /* ========================================
-   7. MARKETING E POSICIONAMENTO
+   6. MARKETING E POSICIONAMENTO
 ======================================== */
 
 .marketing {
@@ -613,6 +468,32 @@ p {
   flex-direction: column;
 }
 
+.marketing-principles {
+  display: flex;
+  flex-direction: column;
+}
+
+.marketing-principles > div {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 18px;
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+
+.marketing-principles > div > span {
+  margin-top: 4px;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.marketing-principles p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
 .pillar {
   display: grid;
   grid-template-columns: 44px 1fr;
@@ -630,11 +511,39 @@ p {
 }
 
 /* ========================================
-   8. DASHBOARD DE CRESCIMENTO
+   7. DASHBOARD DE CRESCIMENTO
 ======================================== */
 
 .growth {
+  position: relative;
+  isolation: isolate;
   overflow: hidden;
+  background: #121212;
+}
+
+.growth-background-video {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.growth-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(18, 18, 18, 0.65);
+  pointer-events: none;
+}
+
+.growth-content {
+  position: relative;
+  z-index: 1;
 }
 
 .dashboard {
@@ -806,56 +715,82 @@ p {
 }
 
 /* ========================================
-   9. RODAPÉ E CONTACTO
+   8. RODAPÉ E CONTACTO
 ======================================== */
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 50px 30px;
-  padding-top: 70px;
+  display: block;
+  padding-top: 76px;
   padding-bottom: 24px;
   border-top: 1px solid var(--line);
   background: #111111;
 }
 
-.footer h2 {
-  max-width: 620px;
-  margin: 16px 0 0;
-  color: var(--text);
-  font-size: clamp(26px, 4vw, 42px);
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  line-height: 1.2;
+.footer-contact {
+  max-width: 760px;
+  margin-bottom: 64px;
 }
 
-.footer-link {
+.footer-contact-title {
+  margin: 18px 0 14px;
+  color: var(--text);
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.footer-contact > p {
+  max-width: 520px;
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.footer-contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.footer-contact-links a {
   display: inline-flex;
   align-items: center;
-  gap: 18px;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(255, 184, 0, 0.5);
+  width: fit-content;
+  max-width: 100%;
   color: var(--gold);
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  transition: color 180ms ease, opacity 180ms ease;
 }
 
-.footer-link span {
-  transition: transform 180ms ease;
+.footer-contact-links a:hover {
+  color: var(--white);
 }
 
-.footer-link:hover span {
-  transform: translate(3px, -3px);
+.footer-contact-links a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
 }
 
 .footer-bottom {
   display: flex;
-  grid-column: 1 / -1;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   padding-top: 24px;
   border-top: 1px solid var(--line);
+}
+
+.nav-brand {
+  color: var(--white);
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
 }
 
 .footer-bottom > span,
@@ -864,12 +799,16 @@ p {
   font-size: 10px;
 }
 
+.footer-bottom > a:last-child {
+  transition: color 180ms ease;
+}
+
 .footer-bottom > a:last-child:hover {
   color: var(--gold);
 }
 
 /* ========================================
-   10. RESPONSIVIDADE — TABLETS
+   9. RESPONSIVIDADE — TABLETS
 ======================================== */
 
 @media (max-width: 900px) {
@@ -878,109 +817,9 @@ p {
   }
 
   .section,
-  .hero,
   .footer {
     padding-right: 28px;
     padding-left: 28px;
-  }
-
-  .navigation {
-    gap: 18px;
-  }
-
-  .navigation nav {
-    gap: 18px;
-  }
-
-  .service-grid {
-    gap: 22px;
-  }
-
-  .marketing {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  .portfolio-art {
-    min-height: 250px;
-  }
-}
-
-/* ========================================
-   11. RESPONSIVIDADE — TELEMÓVEIS
-======================================== */
-
-@media (max-width: 600px) {
-  .section,
-  .hero,
-  .footer {
-    padding-right: 22px;
-    padding-left: 22px;
-  }
-
-  .navigation {
-    min-height: 76px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 14px;
-  }
-
-  .nav-brand {
-    font-size: 12px;
-  }
-
-  .navigation nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    gap: 24px;
-    padding: 0 0 16px;
-  }
-
-  .navigation nav a,
-  .nav-contact {
-    font-size: 11px;
-  }
-
-  .hero-content {
-    padding: 55px 0 65px;
-  }
-
-  .brand-lockup {
-    width: min(84vw, 390px);
-  }
-
-  .brand-name {
-    top: 43%;
-    width: 94%;
-  }
-
-  .hero-overline {
-    font-size: 8px;
-    letter-spacing: 0.18em;
-  }
-
-  .hero h1 {
-    font-size: clamp(27px, 8vw, 42px);
-  }
-
-  .hero h1 span {
-    font-size: 10px;
-    letter-spacing: 0.22em;
-  }
-
-  .hero-description {
-    max-width: 330px;
-    font-size: 13px;
-  }
-
-  .desktop-break {
-    display: none;
-  }
-
-  .hero-bottom {
-    font-size: 8px;
-    letter-spacing: 0.08em;
   }
 
   .section {
@@ -1045,6 +884,7 @@ p {
     gap: 36px;
   }
 
+  .marketing-principles > div,
   .pillar {
     grid-template-columns: 36px 1fr;
     gap: 12px;
@@ -1089,18 +929,16 @@ p {
   }
 
   .footer {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding-top: 55px;
+    padding-top: 56px;
     padding-bottom: 22px;
   }
 
-  .footer h2 {
-    font-size: 30px;
+  .footer-contact {
+    margin-bottom: 44px;
   }
 
-  .footer-link {
-    justify-self: start;
+  .footer-contact-title {
+    font-size: clamp(36px, 8vw, 48px);
   }
 
   .footer-bottom {
@@ -1115,7 +953,40 @@ p {
 }
 
 /* ========================================
-   12. MOVIMENTO REDUZIDO
+   10. RESPONSIVIDADE — TELEMÓVEIS
+======================================== */
+
+@media (max-width: 480px) {
+  .section,
+  .footer {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .footer-contact-title {
+    font-size: clamp(34px, 10vw, 44px);
+  }
+
+  .footer-contact > p {
+    font-size: 13px;
+  }
+
+  .footer-contact-links a {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+  }
+
+  .footer-bottom > a:last-child {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+/* ========================================
+   11. MOVIMENTO REDUZIDO
 ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1144,4 +1015,11 @@ p {
     opacity: 1;
     transform: translate(-50%, 0);
   }
+}
+
+.footer-email {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
 }

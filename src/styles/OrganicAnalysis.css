@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Seção */
+.organic-analysis {
+  width: 100%;
+  padding: 100px 24px;
+  background: #121212;
+  color: #ffffff;
+}
+
+.organic-analysis-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Título principal */
+.organic-analysis-heading {
+  margin-bottom: 36px;
+}
+
+.organic-analysis-heading h2 {
+  margin: 0;
+  color: #ffb300ff;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+/* Card principal */
+.organic-analysis-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 38px;
+
+  padding: 150px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 24px;
+
+  background: #686356;
+
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* Vídeo integrado ao fundo do card principal */
+.organic-analysis-background-video {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0.40;
+}
+
+/* Coluna esquerda: organização do conteúdo */
+.organic-analysis-left {
+  position: relative;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Card secundário AI First */
+.organic-analysis-inner-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 100px 26px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+
+  background: rgba(10, 14, 21, 0.88);
+}
+
+/* Ícone */
+.organic-analysis-symbol {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  place-items: center;
+
+  margin-top: 4px;
+
+  color: #ffb300ff;
+}
+
+.organic-analysis-symbol svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Conteúdo do card AI First */
+.organic-analysis-inner-content {
+  min-width: 0;
+}
+
+.organic-analysis-label {
+  display: block;
+  margin-bottom: 13px;
+
+  color: #ffffff;
+  font-size: 2.0rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+}
+
+.organic-analysis-inner-content h3 {
+  font-family: 'Poppins', sans-serif;
+
+  margin: 0 0 16px;
+
+  color: #ffb300ff;
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.organic-analysis-inner-content p {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 0.98rem;
+  line-height: 1.9;
+}
+
+/* Link de contato */
+.organic-analysis-cta {
+  display: flex;
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 9px 10px 9px 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+
+  background: #1a1f27;
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition:
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.organic-analysis-cta:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+  background: #202630;
+}
+
+/* Seta do link */
+.organic-analysis-cta-arrow {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #ffd700;
+  color: #121212;
+
+  font-size: 1.2rem;
+
+  transition: transform 220ms ease;
+}
+
+.organic-analysis-cta:hover .organic-analysis-cta-arrow {
+  transform: translate(2px, -2px);
+}
+
+.organic-analysis-cta:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 4px;
+}
+
+/* Coluna direita: somente descrição */
+.organic-analysis-right {
+  position: relative;
+  min-width: 0;
+}
+
+.organic-analysis-description {
+  margin: 0;
+
+  color: #d0d6df;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.organic-analysis-description strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 900px) {
+  .organic-analysis {
+    padding: 80px 24px;
+  }
+
+  .organic-analysis-card {
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .organic-analysis-inner-card {
+    gap: 15px;
+    padding: 24px 20px;
+  }
+
+  .organic-analysis-symbol {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+
+  .organic-analysis-inner-content p {
+    font-size: 0.92rem;
+  }
+
+  .organic-analysis-description {
+    font-size: 0.98rem;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 680px) {
+  .organic-analysis {
+    padding: 68px 20px;
+  }
+
+  .organic-analysis-heading {
+    margin-bottom: 26px;
+  }
+
+  .organic-analysis-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .organic-analysis-inner-card {
+    gap: 17px;
+    padding: 25px 20px;
+  }
+
+  .organic-analysis-inner-content h3 {
+    font-size: 2.7rem;
+  }
+
+  .organic-analysis-inner-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .organic-analysis-cta {
+    min-height: 58px;
+  }
+
+  .organic-analysis-description {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+}
+
+/* Respeita a preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .organic-analysis-cta,
+  .organic-analysis-cta-arrow {
+    transition: none;
+  }
+}
+
+.organic-analysis-logo {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  margin: 0 0 16px;
+}

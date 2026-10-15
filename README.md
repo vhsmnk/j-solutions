@@ -1,4 +1,4 @@
-# J-Solutions — Soluções Digitais
+# Jaguar Solutions — Soluções Digitais
 
 Landing page comercial da **J-Solutions**, criada em React para apresentar serviços digitais durante reuniões presenciais com clientes, usando computadores, tablets e telemóveis.
 
@@ -85,23 +85,3 @@ A base visual da landing page já foi montada e está em fase de refinamento. O 
 
 Antes de publicar ou alterar a aplicação, valide o resultado em ecrãs grandes, tablets e telemóveis, especialmente a posição da logo e o comportamento das secções responsivas.
 
-## Execução local
-
-Abra o projeto na pasta local e consulte o `package.json` para confirmar os scripts disponíveis. Em projetos React com Vite, o fluxo habitual é:
-
-```bash
-npm install
-npm run dev
-```
-
-Os comandos acima são indicativos e dependem dos scripts definidos no `package.json`.
-
-## Próximos documentos
-
-A documentação técnica detalhada deverá complementar este README com:
-
-- mapa dos componentes e ficheiros;
-- controlos CSS exatos para tamanhos, cores, fundos e espaçamentos;
-- localização dos recursos visuais do portfólio;
-- implementação do gráfico/dashboard;
-- histórico das alterações e decisões de design.

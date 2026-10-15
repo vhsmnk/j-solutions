@@ -1,4 +1,16 @@
 
+import logoJaguar from "../svg/logo_jaguar_solutions.svg?raw";
+import nomeJaguar from "../svg/jaguar.svg";
+import "./Navbar.css";
+
+const links = [
+  { label: "Início", href: "#inicio" },
+  { label: "Metodologia", href: "#metodologia" },
+  { label: "O que fazemos", href: "#servicos" },
+  { label: "Clientes", href: "#portfolio" },
+  { label: "Contacto", href: "#contacto" },
+];
+
 export default function Navbar() {
   return (
     <header className="navigation">
@@ -7,19 +19,34 @@ export default function Navbar() {
         className="nav-brand"
         aria-label="Jaguar — página inicial"
       >
-        JAGUAR
+        <span className="nav-logo-symbol" aria-hidden="true">
+          <span
+            dangerouslySetInnerHTML={{ __html: logoJaguar }}
+          />
+        </span>
+
+        <img
+          className="nav-logo-name"
+          src={nomeJaguar}
+          alt="JAGUAR"
+        />
       </a>
 
       <nav aria-label="Navegação principal">
-        <a href="#servicos">Serviços</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#estrategia">Estratégia</a>
-        <a href="#crescimento">Dashboard</a>
+        {links.map((link) => (
+          <a href={link.href} key={link.href}>
+            {link.label}
+          </a>
+        ))}
       </nav>
 
-      <a className="nav-contact" href="#contacto">
-        Vamos conversar <span aria-hidden="true">↗</span>
-      </a>
+      <div className="nav-language" aria-label="Idioma">
+        <span className="nav-language-active">PT</span>
+        <span className="nav-language-divider">/</span>
+        <span>EN</span>
+      </div>
     </header>
   );
 }
+
+
